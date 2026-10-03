@@ -14,7 +14,7 @@ per-machine rules. This package ports that reader, solver and rule set to Python
 ## Usage
 
 ```sh
-pip install "gtnh-shadow-convert @ git+https://github.com/MrBruh/gtnh-shadow-convert@v0.1.0"
+pip install "gtnh-shadow-convert @ git+https://github.com/MrBruh/gtnh-shadow-convert@v0.1.1"
 gtnh-shadow-convert fetch-data                         # once: prints where data.bin went
 gtnh-shadow-convert MyPlan.gtnh --data <that path> -o MyPlan.json
 ```
