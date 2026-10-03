@@ -6,6 +6,8 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-03
+
 ### Fixed
 
 - `import gtnh_shadow_convert.emit` gives the module again. The package root re-exported the
@@ -46,5 +48,6 @@ gtnh-process-line-solver (MrBruh/gtnh-process-line-solver#293).
 - A conformance suite: the calculator's 29 test plans and Jest snapshot, compared row by row; CI
   runs it against the real `data.bin`, fetched by its sha256 and cached.
 
-[Unreleased]: https://github.com/MrBruh/gtnh-shadow-convert/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/MrBruh/gtnh-shadow-convert/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/MrBruh/gtnh-shadow-convert/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/MrBruh/gtnh-shadow-convert/releases/tag/v0.1.0
