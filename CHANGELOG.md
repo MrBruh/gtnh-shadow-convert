@@ -6,7 +6,18 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-02
+
+The first release: converts a ShadowTheAge calculator plan into gtnh-factory-flow plan JSON for
+gtnh-process-line-solver (MrBruh/gtnh-process-line-solver#293).
+
 ### Added
+
+- `convert(plan, data)` and the `gtnh-shadow-convert` command (`PLAN.gtnh --data DATA.bin`, and
+  `fetch-data`): a solved plan written as gtnh-factory-flow plan JSON with a `converter` block, one
+  node per recipe row, whole machine counts, one runtime variant per recipe, the controller block,
+  the build options (coil, pipe and coke-oven casings, slices, the Chemical Plant's solid casing),
+  and feeds and drains for everything the plan takes in and puts out.
 
 - `databin`: a reader for the calculator's `data.bin` (format version 7), ported from its
   `repository.ts`, including the table that carries older exports' recipe ids forward. Any other
@@ -28,3 +39,6 @@ All notable changes to this project are recorded here. The format follows
   2.9 data) is computed as the calculator computes it, and its tier is read off its tooltip.
 - A conformance suite: the calculator's 29 test plans and Jest snapshot, compared row by row; CI
   runs it against the real `data.bin`, fetched by its sha256 and cached.
+
+[Unreleased]: https://github.com/MrBruh/gtnh-shadow-convert/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/MrBruh/gtnh-shadow-convert/releases/tag/v0.1.0

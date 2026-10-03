@@ -11,8 +11,29 @@ plan's targets. Recipe contents, rates and machine counts are not in it: the cal
 out in the browser from its recipe data (`data.bin`) with a linear program and about 1,900 lines of
 per-machine rules. This package ports that reader, solver and rule set to Python.
 
-**Status:** under construction. It reads `data.bin` and `.gtnh` files and solves a plan's rates
-exactly as the calculator does; the plan output follows.
+## Usage
+
+```sh
+pip install "gtnh-shadow-convert @ git+https://github.com/MrBruh/gtnh-shadow-convert@v0.1.0"
+gtnh-shadow-convert fetch-data                         # once: prints where data.bin went
+gtnh-shadow-convert MyPlan.gtnh --data <that path> -o MyPlan.json
+```
+
+or from Python:
+
+```python
+from gtnh_shadow_convert import convert
+
+plan = convert("MyPlan.gtnh", "data.bin")  # a dict, ready for json.dump
+```
+
+A plan that does not convert raises a `ConversionError` (the command exits 2 with the reason):
+an unknown recipe id, a plan that cannot be balanced, a machine whose rule is not ported, or a
+recipe with no machine time. Things the calculator computes but the game would not run are kept and
+reported as a `ConversionWarning`. The library never prints.
+
+[gtnh-process-line-solver](https://github.com/MrBruh/gtnh-process-line-solver) calls this
+in-process: `gtnh-solve MyPlan.gtnh --shadow-data data.bin`.
 
 ## How a plan is solved
 
@@ -86,6 +107,39 @@ pack named by hand.
 The format carries a version number (`DATA_VERSION`, 7 today), and the calculator bumps it with
 some of its pack imports. The reader refuses any version but 7 rather than guess at a new layout.
 
+## The plan it writes
+
+The output is gtnh-factory-flow plan JSON, in the shape gtnh-process-line-solver's adapter reads
+(`adapter/plan.py` there), with a `converter` block naming this package, the calculator commit, and
+the `data.bin` (format version, sha256, pack) it was solved against.
+
+- **One node per recipe row**, with its own recipe, since one recipe can sit in a plan twice at
+  different tiers. A row the solved plan never runs is left out, with a warning.
+- **Machine count** is the calculator's fractional count rounded up, exactly (`max(1, ceil)`).
+- **Figures:** the recipe keeps its base EU/t and duration, and carries one runtime variant with
+  the figures the row runs at: EU/t per parallel and the batch duration after overclocks, the speed
+  bonus and rounding to whole ticks, with `parallel: 1`. The node carries the parallels. The adapter
+  multiplies `variant.eut x node.parallel` for power and `amount x node.parallel / duration` for
+  rates, so each figure is counted once.
+- **The machine:** `source.machineBlock` is the controller block (`gregtech:gt.blockmachines@998`),
+  `machineType` its name, and one machine handler says whether it is a `single` block or a
+  `multiblock`. A single block is the tiered block of the row's tier ("Advanced Fluid Heater" at
+  MV), read off the listed blocks' tooltips.
+- **Options** that shape the build, in the arodoid fork's keys: `coilTier` (`hss_g`), and
+  `machineConfigTiers` `pipeCasing` (`titanium`), `itemPipeCasing`, `cokeOvenCasing`
+  (`heat_proof`), `cokeOvenSlices` (`slice-3`), and for the Chemical Plant `solidCasing`: the
+  cheapest solid casing GT runs the recipe on, from its special value (`titanium` for 4), which the
+  calculator itself does not model.
+- **Goods:** items as `mod:name@damage` in lower case (damage 0 left off), fluids by their bare name,
+  an ore-dict input as one concrete item. A non-consumed input (a programmed circuit) is
+  `amount: 1, consumed: false`; a chanced output keeps its amount and adds `chance` (0 to 1).
+- **Edges:** every good linked inside a group gets an edge from each row that makes it to each row
+  that uses it. Every good the plan takes in gets a feed storage piped to its users, and every good
+  it puts out (products and by-products) a drain.
+
+A filled container in a recipe (a water cell) is split into its fluid and its empty container, as
+the calculator links it.
+
 ## Development
 
 Python 3.14, and only 3.14:
@@ -114,5 +168,6 @@ and `LICENSE` carries both copyright lines. The ported files:
 | `src/repository.ts` (and the writer, `export/MemoryMappedPackConverter.cs`) | `databin.py`, `testing.py` |
 | `src/page.ts` (the plan model, `ValidateChoices`) | `page.py`, `solve.py` |
 | `src/solver.ts` | `solve.py`, `lp.py` (replacing javascript-lp-solver) |
+| (new: the calculator has no export of its results) | `emit.py`, `cli.py` |
 | `src/machines.ts` | `machines/` |
 | `tests/*.gtnh`, `src/tests/__snapshots__/solver.test.ts.snap` (copied) | `tests/conformance/` |
