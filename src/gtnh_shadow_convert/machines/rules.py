@@ -144,6 +144,7 @@ _add(
         speed=D("0.5"),
         power=D(0),
         excludes_recipe=_compressor_excluder(0),
+        single_block=True,
         info="Steam machine: Steam consumption not calculated",
     ),
 )
@@ -160,6 +161,7 @@ _add(
         NULL_OVERCLOCKER,
         power=D(0),
         excludes_recipe=_compressor_excluder(0),
+        single_block=True,
         info="High pressure steam machine: Steam consumption not calculated",
     ),
 )

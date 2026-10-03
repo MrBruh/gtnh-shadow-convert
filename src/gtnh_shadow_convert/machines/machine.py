@@ -105,4 +105,7 @@ class Machine:
     excludes_recipe: Callable[[Recipe], bool] | None = None
     #: Round the duration after dividing by parallels (only the Advanced Assembly Line).
     round_after_parallels: bool = False
+    #: The machine is a single block although the app keys it among the multiblocks (the bronze
+    #: and steel steam machines). Only the emitter reads it, to say what kind of block it is.
+    single_block: bool = False
     info: str = ""
