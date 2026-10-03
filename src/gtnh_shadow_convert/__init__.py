@@ -7,6 +7,7 @@ ports both from ShadowTheAge/gtnh (MIT), pinned in ``SHADOW_COMMIT``.
 
 from .errors import (
     ConversionError,
+    ConversionWarning,
     DataError,
     InfeasiblePlanError,
     MalformedPlanError,
@@ -22,6 +23,7 @@ SHADOW_COMMIT = "af8c79888ec859913b27543c1381c3c11c24658f"
 __all__ = [
     "SHADOW_COMMIT",
     "ConversionError",
+    "ConversionWarning",
     "DataError",
     "InfeasiblePlanError",
     "MalformedPlanError",

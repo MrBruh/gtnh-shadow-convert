@@ -73,3 +73,9 @@ class InfeasiblePlanError(ConversionError):
         names = ", ".join(links) if links else "(none identified)"
         super().__init__(f"the plan cannot be balanced; these links have no solution: {names}")
         self.links = tuple(links)
+
+
+class ConversionWarning(UserWarning):
+    """Something the converter carried through as the calculator does, but that will not run as
+    planned in game (a recipe row set below its recipe's tier, say). Issued with :mod:`warnings`;
+    the library never prints."""

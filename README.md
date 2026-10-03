@@ -11,8 +11,23 @@ plan's targets. Recipe contents, rates and machine counts are not in it: the cal
 out in the browser from its recipe data (`data.bin`) with a linear program and about 1,900 lines of
 per-machine rules. This package ports that reader, solver and rule set to Python.
 
-**Status:** under construction. This release reads `data.bin` and `.gtnh` files and maps the
-calculator's goods ids; the solver, the machine rules and the plan output follow.
+**Status:** under construction. It reads `data.bin` and `.gtnh` files and solves a plan's rates
+exactly as the calculator does, for single blocks; the multiblock rules and the plan output follow.
+
+## How a plan is solved
+
+The calculator's solver (`src/solver.ts`) is ported line for line, with two differences:
+
+- **Exact arithmetic.** The calculator solves its linear program in floating point
+  (javascript-lp-solver). Here every rate is a `Fraction` and the LP is an exact simplex
+  (`lp.py`), so a machine count that is exactly 2 stays 2 when it is rounded up.
+- **Failures are errors.** Where the calculator silently skips (a recipe id it cannot find, a plan
+  that cannot be balanced, a machine it has no rule for), this raises a `ConversionError` naming
+  the problem. Things the calculator computes but the game would not run (a recipe set below its
+  own tier) are kept, with a `ConversionWarning`.
+
+When a plan's optimum is not unique (two recipes making one good at the same cost), the exact
+solver may return a different, equally optimal split than the calculator does.
 
 ## The recipe data
 
@@ -66,4 +81,6 @@ and `LICENSE` carries both copyright lines. The ported files:
 | Calculator | Here |
 |---|---|
 | `src/repository.ts` (and the writer, `export/MemoryMappedPackConverter.cs`) | `databin.py`, `testing.py` |
-| `src/page.ts` (the plan model) | `page.py` |
+| `src/page.ts` (the plan model, `ValidateChoices`) | `page.py`, `solve.py` |
+| `src/solver.ts` | `solve.py`, `lp.py` (replacing javascript-lp-solver) |
+| `src/machines.ts`: `Overclocker`s, `singleBlockMachine`, the `Machine` type | `machines/` |

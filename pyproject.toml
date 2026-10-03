@@ -69,6 +69,12 @@ python_version = "3.14"
 files = ["src/gtnh_shadow_convert", "tests"]
 strict = true
 
+[[tool.mypy.overrides]]
+# Tests compare exact Fractions with int literals (`runs == 2`), which is exact at runtime but which
+# strict_equality reports as non-overlapping. Everything else stays strict.
+module = ["tests.*"]
+strict_equality = false
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-n auto --cov=gtnh_shadow_convert --cov-report=term-missing"

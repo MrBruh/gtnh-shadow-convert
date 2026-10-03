@@ -113,6 +113,14 @@ def test_recipe_type_blocks(repo: Repository) -> None:
     assert recipe_type.multiblocks[0] is repo.goods("i:gregtech:gt.blockmachines:1169")
 
 
+def test_undeclared_goods_are_refused() -> None:
+    data = SyntheticData()
+    data.recipe_type("T")
+    data.recipe("r~x", "T", inputs=[("i:nope:nope:0", 1)])
+    with pytest.raises(ValueError, match="never declared"):
+        data.to_bytes()
+
+
 def test_explicit_default_crafter_and_a_type_with_no_blocks() -> None:
     data = SyntheticData()
     a = data.item("m", "a", 0, "A")
