@@ -1,0 +1,528 @@
+{
+  "name": "Platline",
+  "products": [
+    {
+      "goodsId": "i:bartworks:gt.bwMetaGenerateddust:47",
+      "amount": -1
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "f:gregtech:chlorine": 1,
+      "f:minecraft:water": 1,
+      "i:gregtech:gt.metaitem.01:2022": 1,
+      "f:GalacticraftMars:oxygen": 1,
+      "f:gregtech:sulfuricacid": 1,
+      "i:bartworks:gt.bwMetaGenerateddust:57": 1,
+      "i:gregtech:gt.metaitem.01:2017": 1,
+      "i:IC2:itemCellEmpty:0": 1,
+      "f:gregtech:oxygen": 1
+    },
+    "elements": [
+      {
+        "type": "recipe_group",
+        "links": {
+          "i:bartworks:gt.bwMetaGenerateddust:47": 1,
+          "f:bartworks:ammonium chloride": 1,
+          "f:gregtech:hydrochloricacid_gt5u": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~LynJPjiqMsiUBCSoN2J2GA==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Nl4XZN9dMfWJG1fm81lzYg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~yNGXyzctMyOA2P1elXuagQ==",
+            "voltageTier": 1,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~vuu2rZ82Prq38HjtC49TzQ==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~tr4LppjYNN2G1Hml9L6aFQ==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~0OGphknuNJOqPi_j63HBvw==",
+            "voltageTier": 1,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~ONmYeQdgOqy64CAeHS-Adg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~0LjH8tPBMXy_rPTPxOyRrg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~IefPsWrON5e0h8fAlVuebQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Basic platinum loop"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:bartworks:palladium enriched ammonia": 1,
+          "f:dreamcraft:ammonia": 1,
+          "f:gregtech:ammonia": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~pMPqnAZcOvezrSqqqsOA9A==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~cM4gFPskOIezTTJYHti9cQ==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~zGXNxD7bMRiXezvT9TPv2w==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~4t1Pi95eM9qhOzz6oYfUeg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Palladium"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:gregtech:chlorine": 1,
+          "f:dreamcraft:ammonia": 1,
+          "f:GalacticraftMars:oxygen": 1,
+          "i:IC2:itemCellEmpty:0": 1,
+          "f:minecraft:water": 1,
+          "f:GalacticraftMars:hydrogen": 1,
+          "f:gregtech:hydrogen": 1,
+          "f:gregtech:oxygen": 1,
+          "f:gregtech:ammonia": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~zitUERrJPTmV5Uq_mIKFTw==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~8FjJKRihO0ud-q63kwD3Gg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~isenCJT_MtGn3kvH1Q4mxw==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~5CozmSF-OgOeq8r9xLa3Tg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Ypoytta6PUeIoQetrBcqEQ==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~y_1VfXznPde_m6qsPvzi6A==",
+            "voltageTier": 0,
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Basics"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:gregtech:chlorine": 1,
+          "i:gregtech:gt.metaitem.01:2817": 1,
+          "i:gregtech:gt.metaitem.01:2022": 1,
+          "f:GalacticraftMars:oxygen": 1,
+          "i:gregtech:gt.metaitem.01:2017": 1,
+          "f:gregtech:oxygen": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~2imLgzdaOZSo8pXaO3VPjw==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~TF7XJPZLMt6y_n9Jg73Gwg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~h2wj8vOeMzKwgVxc2xlD6g==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~52dieUdiOAGg-MCRM3U9gg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~vbNn53tuN1eOLJD9ft4XqA==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~XqzPt-xZMi-sQk862hF4xQ==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~H_pzwkgZNouYwV0fPVH3Pw==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~X3cIaj5jNsWTAnasnHmrCA==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~jru56OjSMROEOWF0qVdr_w==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~5_rcj8wYObmgOpZnuOfuEA==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~G-_eHXqzO0GD45ssKkYACQ==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~kcqJ4g98OfeVQitXw1cchg==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~0-j1XaUnP8W8YE2MLAoSOQ==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~0E39gtWlOCG9LMrRE4J5dA==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~LSn4fyAaNK6jkJJlUSSe0A==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~wK3cZxmGPCi3SlC7m425rw==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Ic3yTLIFO-qqZ6NeNvjikA==",
+            "voltageTier": 1,
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Rhodium"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:minecraft:water": 1,
+          "i:gregtech:gt.metaitem.01:2817": 1,
+          "f:gregtech:chlorine": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~CssUsJRmNbuzDNguZebxUg==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~DDnMMSc1MwSd5dWPtL7NnQ==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~_ksvJY-rPUSz0fjEKZ2CFQ==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~JR-hI5SMNLOyskxiHBPilQ==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~kvIiXeauM4SCV4XhubeWUA==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1126",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~zpFWzzlXOzWpvhW5me3qFg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~KzuQtPiiOLml2uiPpl58HA==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Ruthenium"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~69nvUSG0NVGpsijx3Edzdg==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~apzRTCp_PUit0Hg5Lgl9Hg==",
+            "voltageTier": 4,
+            "crafter": "i:gregtech:gt.blockmachines:1126",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Himt8YD6PZud6pX1X-Stmg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~vW4NWbhyOFSLqSe1bw0zNw==",
+            "voltageTier": 1,
+            "crafter": "i:gregtech:gt.blockmachines:1000",
+            "choices": {
+              "coilTier": 0,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~iT2RlgDsNNGB6OyF6fGI2A==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~-mIZykKDPHWxSi2ju40Bjg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~SPTaZ50AO8WaOYE2EotNQA==",
+            "voltageTier": 3,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~iL4olhulOFu_xxuJlz1ctg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~0OGphknuNJOqPi_j63HBvw==",
+            "voltageTier": 1,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~VDPcXyUwPke5sPWdfA0XZg==",
+            "voltageTier": 0,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~gX9W-nqeMweZQaTQtt6LJA==",
+            "voltageTier": 0,
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Osmium, Iridium"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:gregtech:sulfuricacid": 1,
+          "f:gregtech:hydrogen": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~ZFswn57wMEm6i7rJwzoaUw==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~rubYs3BnNo-BpmK8siw1Rw==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~OAZ6jQGPNO-7pNyNKDjNXQ==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Up7mwrByN-mANETOLOjf4g==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~WwpXPkVMMnyh5Uut9X6M7Q==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "Formic acid"
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

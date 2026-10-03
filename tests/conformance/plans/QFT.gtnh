@@ -1,0 +1,55 @@
+{
+  "name": "QFT",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~VxRte9DANy-Bha2qusaLUQ==",
+        "voltageTier": 12,
+        "choices": {
+          "catalysts": 16,
+          "shielding": 3,
+          "manipulator": 1,
+          "focusedOutput": 0,
+          "focusedAll": 1
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~QV3Yc2vgN0eJu_LjC9QG6g==",
+        "voltageTier": 10,
+        "choices": {
+          "catalysts": 1,
+          "shielding": 3,
+          "manipulator": 3,
+          "focusedOutput": 2,
+          "focusedAll": 0
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~OuVGFxaDNBSFyLid1b3k3w==",
+        "voltageTier": 11,
+        "choices": {
+          "catalysts": 1,
+          "shielding": 3,
+          "manipulator": 3,
+          "focusedOutput": 2,
+          "focusedAll": 1
+        },
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

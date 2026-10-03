@@ -1,0 +1,317 @@
+{
+  "name": "Test ore proc",
+  "products": [
+    {
+      "goodsId": "i:gregtech:gt.metaitem.03:5035",
+      "amount": -10
+    },
+    {
+      "goodsId": "i:gregtech:gt.metaitem.03:5810",
+      "amount": -5
+    },
+    {
+      "goodsId": "i:gregtech:gt.metaitem.03:5839",
+      "amount": -10
+    },
+    {
+      "goodsId": "i:gregtech:gt.metaitem.03:5500",
+      "amount": -5
+    },
+    {
+      "goodsId": "i:gregtech:gt.metaitem.03:5699",
+      "amount": -5
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "i:gregtech:gt.metaitem.01:2826": 1,
+      "f:GalacticraftMars:oxygen": 1,
+      "f:gregtech:oxygen": 1
+    },
+    "elements": [
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~LthoxI6UPgCI9auvW06xrg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~_bO9DbTuMAmxaRxSblCKig==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:850",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~ZAR3A8_cNweQ9WCobx2q4w==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~cFUBZ7exNA6KcgC6Au2bDg==",
+            "voltageTier": 2,
+            "choices": {
+              "mode": 0,
+              "sumTurbineTier": 1,
+              "fuel": 0
+            }
+          }
+        ],
+        "collapsed": true,
+        "name": "M-B-M-C"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~vKYuIkbWNSK0Am1OcMaJQg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Eeoe8eYyOHqLVD26Sa1SmQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:850",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~eQD5ayWzPU-Wp3zHW7hxRQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~GX27UMD2MTeUfu56vLZeWg==",
+            "voltageTier": 2,
+            "choices": {
+              "mode": 0,
+              "sumTurbineTier": 1,
+              "fuel": 0
+            }
+          }
+        ],
+        "collapsed": true,
+        "name": "M-W-M-C"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~sKTuaIxWNuSk_ZdwwDnMhQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~S8-5qQEuP7iksdVDWjpXuQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:849",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~qzk6uMquP2WhAQsZPG7R2Q==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~r4dlDN1zNl6sVqaJV4Z6CQ==",
+            "voltageTier": 2,
+            "choices": {
+              "coilTier": 2,
+              "muffler": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~cfghbafANtC1ekHjRzMLxA==",
+            "voltageTier": 2,
+            "choices": {
+              "coilTier": 2,
+              "muffler": 0
+            }
+          }
+        ],
+        "collapsed": true,
+        "name": "M-W-T-M-EBF"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~8VXs_8X7OOuho_C5et4XBg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~l2eQKbtAMfak66VwtLwn8g==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:850",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~39PKcRcFMge5yTyalFKmnQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:840",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "M-W-Sift"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~zxH4ywdANBKqVK5l8rM1bw==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~jsNqKgKpMGCC28tYcvLyjg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:850",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~aMhsOzEhMnK-Em3HqQCr5g==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:797",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~jZLm8pQMOxK7yMuqoIkHtg==",
+            "voltageTier": 2,
+            "choices": {
+              "mode": 0,
+              "sumTurbineTier": 1,
+              "fuel": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~NZrPmj5uOr6X9C5IhSL2Bw==",
+            "voltageTier": 2,
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "M-W-M-C-Electrolyse"
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~lm_d8dlwORSy_JGlmk0SZg==",
+        "voltageTier": 1,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~g6unjiXGPMyLx_5z372PHw==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:104",
+        "choices": {}
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~wjHhkfjTN5uBB-OT8VxWJw==",
+            "voltageTier": 2,
+            "choices": {
+              "mode": 0,
+              "sumTurbineTier": 1,
+              "fuel": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~19QVE_8rOxywIEHunCL9Lg==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~3ZDvQfKLOM-VXs03MkGWDg==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~nCsplWJTPt-NsgTngfkNfQ==",
+            "voltageTier": 3,
+            "choices": {
+              "mode": 0,
+              "sumTurbineTier": 1,
+              "fuel": 0
+            }
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~3wLpYq4GPuSuQ0VR5zugpg==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~C9yxeF7hOr6M9kdLq7caqQ==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~jHk16yXhMaePaG-WugGJ1w==",
+            "voltageTier": 2,
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~xlp8A7X3OgK5-UKLy2W0pQ==",
+            "voltageTier": 2,
+            "choices": {}
+          }
+        ],
+        "collapsed": false,
+        "name": "Stone dust proc"
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 2,
+    "timeUnit": "min"
+  }
+}

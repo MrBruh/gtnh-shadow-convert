@@ -49,7 +49,7 @@ from .machines import (
     RecipeContext,
     evaluate,
     excluder_of,
-    rule_for,
+    rule_for_crafter,
     single_block_rule,
 )
 from .page import LinkAlgorithm, Page, RecipeElement, RecipeGroup
@@ -371,7 +371,7 @@ class _Solver:
         if crafter is None:
             machine = single_block_rule(recipe_type)
         elif timed:
-            machine = rule_for(crafter.name)
+            machine = rule_for_crafter(crafter)
         else:
             machine = excluder_of(crafter.name)
         tier = element.voltage_tier

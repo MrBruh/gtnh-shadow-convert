@@ -1,0 +1,86 @@
+{
+  "name": "Epoxid",
+  "products": [
+    {
+      "goodsId": "f:gregtech:molten.epoxid",
+      "amount": 250
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "i:gregtech:gt.metaitem.01:2817": 1,
+      "i:gregtech:gt.metaitem.01:2685": 1
+    },
+    "elements": [
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:gregtech:phenol": 1,
+          "f:gregtech:hydrochloricacid_gt5u": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~GGFsnPVuObGs6ap0fkUTWQ==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~NbXvUN_1OyWfHknGb2lCow==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~npQElb2vPQCMKB-u-oiOJg==",
+            "voltageTier": 0,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": false,
+        "name": "LEG #1"
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~1grR9LTlPnCnF96dS-LcXQ==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~tETtUrBcMt-zVtZkSuU4pg==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~xDD_lTDhMdaw1icPRS82VQ==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~hySq2aL9P_ue7fFGZmO2BQ==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~J3h1EXkHOyW5tuYYMC1b1Q==",
+        "voltageTier": 0,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

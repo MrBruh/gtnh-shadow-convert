@@ -1,0 +1,52 @@
+{
+  "name": "Tungsten",
+  "products": [
+    {
+      "goodsId": "i:gregtech:gt.metaitem.01:11081",
+      "amount": 16
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~qtcy8ZviMqaPYbIGos4F9w==",
+        "voltageTier": 3,
+        "crafter": "i:gregtech:gt.blockmachines:1002",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~rIoTKaPxP6mnlSIf647ZOA==",
+        "voltageTier": 4,
+        "crafter": "i:gregtech:gt.blockmachines:1000",
+        "choices": {
+          "coilTier": 2
+        }
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~yEe9piywPqqHB_38ezgiaQ==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1000",
+        "choices": {
+          "coilTier": 0
+        }
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~jxcC0yyUPPOWkn42-7te4w==",
+        "voltageTier": 3,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

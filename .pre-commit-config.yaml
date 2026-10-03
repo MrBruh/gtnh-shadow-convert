@@ -6,6 +6,8 @@
 # Thereafter every commit runs ruff (lint + format), mypy, file-hygiene checks, and a
 # Conventional-Commits check on the message.
 default_install_hook_types: [pre-commit, commit-msg]
+# The calculator's test plans and snapshot are vendored byte for byte; no hook may touch them.
+exclude: ^tests/conformance/(plans/|solver\.test\.ts\.snap$)
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks

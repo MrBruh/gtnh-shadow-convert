@@ -1,0 +1,63 @@
+{
+  "name": "Oxygen",
+  "products": [
+    {
+      "goodsId": "f:gregtech:oxygen",
+      "amount": 9600
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~Zx5M8dmoMYOCvjAvTfJKmw==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~KNFUVhzfOwq6mFtHoi7cjg==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~YaW3X6b4O_SwqcLuUmt0bQ==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~qb2P1J_2PJaw3Ho18q4cig==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~vCIgnPLvPtaAXOM9ybTb2Q==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~nhMX_iitMiiwky68o_o5Ag==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~6eEcuvgcMBKLvjzLUWv6dQ==",
+        "voltageTier": 1,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

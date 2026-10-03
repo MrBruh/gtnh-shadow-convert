@@ -37,6 +37,11 @@ class Overclocker(Protocol):
 _CANNOT = OverclockResult(Fraction(1), Fraction(1), 0, "Can't overclock")
 
 
+def js_number(value: Fraction) -> str:
+    """A number as JavaScript prints it in a label: ``2``, ``1.5``."""
+    return str(value.numerator) if value.denominator == 1 else repr(float(value))
+
+
 def _capped(limit: int | None, count: int) -> int:
     return count if limit is None else min(limit, count)
 
@@ -47,13 +52,14 @@ class StandardOverclocker:
 
     max_perfect: int | None
     max_normal: int | None
-    multiplier: int = 4
+    #: Speed per perfect tier. Not always whole: a Netherite arc-furnace electrode gives 1.5.
+    multiplier: Fraction = Fraction(4)
 
     @classmethod
     def only_perfect(
-        cls, max_perfect: int | None = None, multiplier: int = 4
+        cls, max_perfect: int | None = None, multiplier: Fraction | int = 4
     ) -> StandardOverclocker:
-        return cls(max_perfect, 0, multiplier)
+        return cls(max_perfect, 0, Fraction(multiplier))
 
     @classmethod
     def only_normal(cls, max_normal: int | None = None) -> StandardOverclocker:
@@ -77,7 +83,8 @@ class StandardOverclocker:
             if self.multiplier == 4:
                 parts.append(f"Perfect OC x{perfect}{capped}")
             else:
-                parts.append(f"{self.multiplier}/{self.multiplier} OC x{perfect}{capped}")
+                m = js_number(self.multiplier)
+                parts.append(f"{m}/{m} OC x{perfect}{capped}")
         if normal > 0:
             capped = " (capped)" if normal == self.max_normal else ""
             factor = Fraction(2) ** normal

@@ -131,10 +131,45 @@ class Goods(_Searchable):
         return self._string(12)
 
 
+#: Tier names as a single block's tooltip spells them, LV first (``export/VoltageTiers.cs``).
+_TOOLTIP_TIERS = (
+    "LV",
+    "MV",
+    "HV",
+    "EV",
+    "IV",
+    "LuV",
+    "ZPM",
+    "UV",
+    "UHV",
+    "UEV",
+    "UIV",
+    "UMV",
+    "UXV",
+    "MAX",
+)
+
+
 class Item(Goods):
     """An item (``Item``); a filled container also names its fluid and its empty form."""
 
     __slots__ = ()
+
+    @property
+    def tooltip(self) -> list[str]:
+        """The tooltip's lines, as HTML."""
+        return [self._repo.string(pointer) or "" for pointer in self._slice(10)]
+
+    @property
+    def single_block_tier(self) -> int | None:
+        """The voltage tier of a GregTech single block (0 is LV), read off its tooltip's
+        "Voltage IN: 32 (LV)" line as the export's ``GetSingleBlockVoltageTier`` does; ``None``
+        for anything else, multiblock controllers included."""
+        line = next((text for text in self.tooltip if "Voltage IN" in text), None)
+        if line is None:
+            return None
+        text = plain_text(line)
+        return next((tier for tier, name in enumerate(_TOOLTIP_TIERS) if f"({name})" in text), None)
 
     @property
     def damage(self) -> int:

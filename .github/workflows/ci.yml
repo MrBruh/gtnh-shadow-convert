@@ -49,14 +49,42 @@ jobs:
           COVERAGE_CORE: sysmon
         run: pytest --cov-fail-under=95
 
+  # The converter against the calculator itself (tests/test_conformance.py), on the real data.bin.
+  # That file has no license, so it is never committed: it is fetched from the pinned gtnh-data
+  # commit, checked against its known sha256 by fetch_data(), and cached between runs.
+  conformance:
+    name: Conformance (real data.bin)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          cache-dependency-path: |
+            pyproject.toml
+            constraints-dev.txt
+      - name: Install
+        run: pip install -e ".[dev]" -c constraints-dev.txt
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/gtnh-shadow-convert
+          key: shadow-data-624c9a20c8476dc630c274145dc04c72d7c582e130a3599dc49ce9aee0a2fe73
+      - name: Fetch data.bin
+        run: |
+          path=$(python -c "from gtnh_shadow_convert.fetch import fetch_data; print(fetch_data())")
+          echo "GTNH_SHADOW_DATA=$path" >> "$GITHUB_ENV"
+      - name: Conformance and real-data tests
+        run: pytest --no-cov tests/test_conformance.py tests/test_databin.py tests/test_fetch.py
+
   # One stable required check for branch protection: passes only if every job above passed.
   test:
     name: test
-    needs: [static, pytest]
+    needs: [static, pytest, conformance]
     if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Gate on every job
         run: |
-          echo "static=${{ needs.static.result }} pytest=${{ needs.pytest.result }}"
-          [ "${{ needs.static.result }}" = "success" ] && [ "${{ needs.pytest.result }}" = "success" ]
+          echo "static=${{ needs.static.result }} pytest=${{ needs.pytest.result }} conformance=${{ needs.conformance.result }}"
+          [ "${{ needs.static.result }}" = "success" ] && [ "${{ needs.pytest.result }}" = "success" ] && [ "${{ needs.conformance.result }}" = "success" ]

@@ -1,0 +1,57 @@
+{
+  "name": "Polyphenylene",
+  "products": [
+    {
+      "goodsId": "f:gregtech:molten.polyphenylenesulfide",
+      "amount": 1500
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "i:gregtech:gt.metaitem.01:2817": 1,
+      "i:gregtech:gt.metaitem.01:2017": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~gnFsu0AtO2a8cVM1dXFMRw==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~p7IvAziPMdqruAPnUfkrRg==",
+        "voltageTier": 0,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~K_D7nOQ-OjSjgdGcimEJyQ==",
+        "voltageTier": 0,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~TF7XJPZLMt6y_n9Jg73Gwg==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~6ssKZDNqN4GCHgRZ9lem9w==",
+        "voltageTier": 0,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}
