@@ -299,6 +299,9 @@ class _Writer:
         return self.record(("oredict", oredict_id), write)
 
     def goods_key(self, goods_id: str) -> _Key:
+        data = self.data
+        if goods_id not in (*data._items, *data._fluids, *data._oredicts):
+            raise ValueError(f"{goods_id!r} is used in a recipe but was never declared")
         if goods_id.startswith("f:"):
             return self.fluid_key(goods_id)
         if goods_id.startswith("o:"):
