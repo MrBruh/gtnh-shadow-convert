@@ -10,7 +10,7 @@ ports both from ShadowTheAge/gtnh (MIT), pinned in ``SHADOW_COMMIT``::
 """
 
 from ._pins import SHADOW_COMMIT
-from .emit import convert, emit
+from .emit import convert
 from .errors import (
     ConversionError,
     ConversionWarning,
@@ -35,5 +35,4 @@ __all__ = [
     "UnsupportedMachineError",
     "UnsupportedRecipeError",
     "convert",
-    "emit",
 ]

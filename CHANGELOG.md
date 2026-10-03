@@ -6,6 +6,12 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- `import gtnh_shadow_convert.emit` gives the module again. The package root re-exported the
+  `emit()` function under the same name, which replaced the submodule as an attribute. The
+  root now exports `convert` alone; `emit()` is still `gtnh_shadow_convert.emit.emit`.
+
 ## [0.1.0] - 2026-10-02
 
 The first release: converts a ShadowTheAge calculator plan into gtnh-factory-flow plan JSON for
