@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Lint + types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          cache-dependency-path: |
+            pyproject.toml
+            constraints-dev.txt
+      - name: Install
+        run: pip install -e ".[dev]" -c constraints-dev.txt
+      - name: pre-commit
+        run: pre-commit run --all-files --show-diff-on-failure
+
+  pytest:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          cache-dependency-path: |
+            pyproject.toml
+            constraints-dev.txt
+      - name: Install
+        run: pip install -e ".[dev]" -c constraints-dev.txt
+      - name: Test (coverage gate)
+        env:
+          COVERAGE_CORE: sysmon
+        run: pytest --cov-fail-under=95
+
+  # One stable required check for branch protection: passes only if every job above passed.
+  test:
+    name: test
+    needs: [static, pytest]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate on every job
+        run: |
+          echo "static=${{ needs.static.result }} pytest=${{ needs.pytest.result }}"
+          [ "${{ needs.static.result }}" = "success" ] && [ "${{ needs.pytest.result }}" = "success" ]
