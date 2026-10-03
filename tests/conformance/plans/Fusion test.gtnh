@@ -1,0 +1,43 @@
+{
+  "name": "Fusion test",
+  "products": [
+    {
+      "goodsId": "f:gregtech:plasma.helium",
+      "amount": 100000
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~DP9KmpbrNhK_f7XN8kGPuQ==",
+        "voltageTier": 7,
+        "crafter": "i:gregtech:gt.blockmachines:965",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~DP9KmpbrNhK_f7XN8kGPuQ==",
+        "voltageTier": 3,
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~DP9KmpbrNhK_f7XN8kGPuQ==",
+        "voltageTier": 3,
+        "crafter": "i:gregtech:gt.blockmachines:1194",
+        "choices": {},
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

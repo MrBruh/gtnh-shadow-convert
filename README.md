@@ -12,7 +12,7 @@ out in the browser from its recipe data (`data.bin`) with a linear program and a
 per-machine rules. This package ports that reader, solver and rule set to Python.
 
 **Status:** under construction. It reads `data.bin` and `.gtnh` files and solves a plan's rates
-exactly as the calculator does, for single blocks; the multiblock rules and the plan output follow.
+exactly as the calculator does; the plan output follows.
 
 ## How a plan is solved
 
@@ -28,6 +28,37 @@ The calculator's solver (`src/solver.ts`) is ported line for line, with two diff
 
 When a plan's optimum is not unique (two recipes making one good at the same cost), the exact
 solver may return a different, equally optimal split than the calculator does.
+
+## Machines
+
+123 of the calculator's 133 machine rules are ported (`machines/`). These 10 are not yet, and a plan
+that uses one raises `UnsupportedMachineError` naming it:
+
+| Machine | Why not yet |
+|---|---|
+| Advanced Assembly Line | laser overclocking and per-input parallels |
+| Nano Forge | nanite parallels and magmatter cost |
+| PCB Factory | trace size, nanites and cooling |
+| Dimensionally Transcendent Plasma Forge | catalysts and convergence |
+| Quantum Force Transformer | focused output chances |
+| Tree Growth Simulator | per-tool outputs |
+| Eye of Harmony | success chance, dilation and astral arrays |
+| Forge of the Gods, Absolute Baryonic Perfection and High Energy Laser Purification Units | the calculator has no rule for them either |
+
+**Single blocks in the 2.9 data.** The export that built the 2.9 `data.bin` did not recognise any
+single block (it sorts them by a "Voltage IN (LV)" tooltip line it no longer matched), so every
+recipe type lists its tiered single blocks among its multiblocks, and the calculator computes them
+with its fallback rule: normal overclocks, one parallel, on the multiblock path. The converter does
+the same, so its numbers are the ones a player sees, and reads each block's tier off that tooltip
+line itself to name the right tiered machine. The only difference from the single-block path is for
+a recipe drawing more than one amp, which can come out one overclock lower.
+
+## Conformance
+
+`tests/test_conformance.py` solves the calculator's own 29 test plans and compares every recipe
+row with the calculator's Jest snapshot (runs per minute, machine count, power and overclock
+factors, overclock label). All 244 rows of the 23 plans whose machines are ported match; the other
+6 plans fail with the unported machine named. CI runs it against the real `data.bin`.
 
 ## The recipe data
 
@@ -83,4 +114,5 @@ and `LICENSE` carries both copyright lines. The ported files:
 | `src/repository.ts` (and the writer, `export/MemoryMappedPackConverter.cs`) | `databin.py`, `testing.py` |
 | `src/page.ts` (the plan model, `ValidateChoices`) | `page.py`, `solve.py` |
 | `src/solver.ts` | `solve.py`, `lp.py` (replacing javascript-lp-solver) |
-| `src/machines.ts`: `Overclocker`s, `singleBlockMachine`, the `Machine` type | `machines/` |
+| `src/machines.ts` | `machines/` |
+| `tests/*.gtnh`, `src/tests/__snapshots__/solver.test.ts.snap` (copied) | `tests/conformance/` |

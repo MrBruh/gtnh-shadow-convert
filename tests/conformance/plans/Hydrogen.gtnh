@@ -1,0 +1,42 @@
+{
+  "name": "Hydrogen",
+  "products": [
+    {
+      "goodsId": "f:minecraft:water",
+      "amount": -6500
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "f:GalacticraftMars:oxygen": 1,
+      "f:gregtech:oxygen": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~vwGjeHKRMYafTU0rNvrgwQ==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~eNy9mMjjM-WzQWAmhpEIUw==",
+        "voltageTier": 1,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~TZUWVC7hPdex_jxmeb5XMA==",
+        "voltageTier": 0,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

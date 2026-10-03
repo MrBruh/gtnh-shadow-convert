@@ -1,0 +1,47 @@
+{
+  "name": "Vinyl chloride",
+  "products": [
+    {
+      "goodsId": "f:gregtech:molten.polyvinylchloride",
+      "amount": 1500
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~TF7XJPZLMt6y_n9Jg73Gwg==",
+        "voltageTier": 0,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~viwsIBLDN2C-ugToY8J0Ig==",
+        "voltageTier": 0,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~M65ngGgOMAuQJvwNKRMhig==",
+        "voltageTier": 0,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~cWHUEfLTN2imO-TlDDgr2A==",
+        "voltageTier": 0,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

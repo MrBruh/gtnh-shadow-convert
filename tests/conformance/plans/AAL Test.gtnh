@@ -1,0 +1,58 @@
+{
+  "name": "AAL Test",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "i:gregtech:gt.metaitem.01:32599": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~UWfVVJ52Nf6dd16uHjf0qA==",
+        "voltageTier": 7,
+        "crafter": "i:gregtech:gt.blockmachines:13532",
+        "choices": {
+          "inputAmperage": 16
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~yN311ZzWOtGIrnebDveuZA==",
+        "voltageTier": 6,
+        "crafter": "i:gregtech:gt.blockmachines:13532",
+        "choices": {
+          "inputAmperage": 16
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~yN311ZzWOtGIrnebDveuZA==",
+        "voltageTier": 11,
+        "crafter": "i:gregtech:gt.blockmachines:13532",
+        "choices": {
+          "inputAmperage": 256
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~RXqVwIiSOjKwADvPKHES6g==",
+        "voltageTier": 11,
+        "crafter": "i:gregtech:gt.blockmachines:13532",
+        "choices": {
+          "inputAmperage": 256
+        },
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

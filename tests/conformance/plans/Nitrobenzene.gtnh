@@ -1,0 +1,76 @@
+{
+  "name": "Nitrobenzene",
+  "products": [
+    {
+      "goodsId": "f:miscutils:nitrobenzene",
+      "amount": 10500
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "f:minecraft:water": 1,
+      "f:GalacticraftMars:hydrogen": 1,
+      "f:gregtech:hydrogen": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~oHhcLWHZPv6s0DtgK38jiw==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:998",
+        "choices": {
+          "coilTier": 0,
+          "pipeFluidCasingTier": 0
+        }
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~DaiSHwngPtunSBzqDQfuvA==",
+        "voltageTier": 2,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~dY9AJxYdM1yU-sjjytgvQg==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1126",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~wsro2Fn0NA2OT-iCHWZ1rw==",
+        "voltageTier": 1,
+        "crafter": "i:gregtech:gt.blockmachines:1126",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~Ak_OcW52MnmRZCxuHuMl4w==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~_S_QGJNlMVuNJgE-nZGArg==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1169",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~eAFVb_KMPd6jU1omySQ9Zg==",
+        "voltageTier": 1,
+        "crafter": "i:gregtech:gt.blockmachines:796",
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

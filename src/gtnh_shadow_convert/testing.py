@@ -71,6 +71,15 @@ class _Item:
     name: str
     nbt: str | None
     container: tuple[str, int, str] | None
+    tooltip: list[str]
+
+
+def voltage_tooltip(tier: str, voltage: int = 32) -> str:
+    """The tooltip line that marks a GregTech single block's tier, as the 2.9 data stores it."""
+    return (
+        f'Voltage IN: <span class="fmt-e">{voltage}</span><span class="fmt-7"> (</span>'
+        f'<span class="fmt-2">{tier}</span><span class="fmt-7">)</span>'
+    )
 
 
 @dataclass
@@ -118,14 +127,16 @@ class SyntheticData:
         *,
         nbt: str | None = None,
         container: tuple[str, int, str] | None = None,
+        tooltip: Sequence[str] = (),
     ) -> str:
         """An item. ``container`` makes it a filled container: (fluid id, mB held, empty item id).
-        An item with ``nbt`` gets the export's id for it: the SHA-1 of the NBT appended."""
+        An item with ``nbt`` gets the export's id for it: the SHA-1 of the NBT appended. A tiered
+        single block carries :func:`voltage_tooltip` in its ``tooltip``."""
         goods_id = f"i:{mod}:{internal_name}:{damage}"
         if nbt:
             goods_id += ":" + hashlib.sha1(nbt.encode("utf-8")).hexdigest()
         self._items[goods_id] = _Item(
-            mod, internal_name, damage, name or internal_name, nbt, container
+            mod, internal_name, damage, name or internal_name, nbt, container, list(tooltip)
         )
         return goods_id
 
@@ -246,14 +257,20 @@ class _Writer:
         self.string(goods_id)
 
     def goods(
-        self, goods_id: str, name: str, mod: str, internal_name: str, nbt: str | None
+        self,
+        goods_id: str,
+        name: str,
+        mod: str,
+        internal_name: str,
+        nbt: str | None,
+        tooltip: Sequence[str] = (),
     ) -> None:
         self.searchable(goods_id)
         self.string(name)
         self.string(mod)
         self.string(internal_name)
         self.ints.extend((0, 0))  # numeric id, icon id
-        self.ref(self.slice_of([]))  # tooltip
+        self.ref(self.slice_of([("str", line) for line in tooltip]))
         self.string(internal_name)  # unlocalized name
         self.string(nbt)
         self.ref(self.slice_of([]))  # production
@@ -263,7 +280,7 @@ class _Writer:
         item = self.data._items[goods_id]
 
         def write() -> None:
-            self.goods(goods_id, item.name, item.mod, item.internal_name, item.nbt)
+            self.goods(goods_id, item.name, item.mod, item.internal_name, item.nbt, item.tooltip)
             self.ints.extend((64, item.damage))
             self.ref(
                 None if item.container is None else self.container_key(goods_id, item.container)

@@ -1,0 +1,56 @@
+{
+  "name": "Space Assembler",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~_OfRiEPMPYma6yzVAjPajQ==",
+        "voltageTier": 8,
+        "crafter": "i:gregtech:gt.blockmachines:14004",
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~_OfRiEPMPYma6yzVAjPajQ==",
+        "voltageTier": 8,
+        "crafter": "i:gregtech:gt.blockmachines:14005",
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~xA6YuAZVPaGujqwTSBbBsA==",
+        "voltageTier": 9,
+        "crafter": "i:gregtech:gt.blockmachines:14004",
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~Z8sp-Sc0O5uJTFpcwDCtkg==",
+        "voltageTier": 10,
+        "crafter": "i:gregtech:gt.blockmachines:14005",
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~Z8sp-Sc0O5uJTFpcwDCtkg==",
+        "voltageTier": 10,
+        "crafter": "i:gregtech:gt.blockmachines:14006",
+        "choices": {},
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

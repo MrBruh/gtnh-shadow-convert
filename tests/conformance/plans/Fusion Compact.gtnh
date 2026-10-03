@@ -1,0 +1,34 @@
+{
+  "name": "Fusion Compact",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "f:bartworks:oganesson": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~F6QidLWMO_CMaXkzw9l9ew==",
+        "voltageTier": 6,
+        "crafter": "i:gregtech:gt.blockmachines:32022",
+        "choices": {},
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~Ddxccy1nNXKyF69zWmk7DQ==",
+        "voltageTier": 7,
+        "crafter": "i:gregtech:gt.blockmachines:32022",
+        "choices": {},
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

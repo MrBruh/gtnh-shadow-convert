@@ -21,4 +21,10 @@ All notable changes to this project are recorded here. The format follows
 - `solve`: the calculator's solver, ported: the machine pick, choice validation, the rate math
   (parallels, overclocks, whole-tick rounding), linking goods within groups, and the LP. A missing
   recipe, an unbalanceable plan or a machine with no ported rule raises instead of being skipped.
-- `machines`: the machine-rule model, the calculator's overclockers and its single-block rule.
+- `machines`: the machine-rule model, the calculator's overclockers and its single-block rule, and
+  123 of its 133 machine rules, the Industrial Coke Oven and ExxonMobil Chemical Plant among them.
+  The other 10 raise `UnsupportedMachineError` with the reason.
+- A tiered single block that the data lists among a recipe type's multiblocks (all of them, in the
+  2.9 data) is computed as the calculator computes it, and its tier is read off its tooltip.
+- A conformance suite: the calculator's 29 test plans and Jest snapshot, compared row by row; CI
+  runs it against the real `data.bin`, fetched by its sha256 and cached.

@@ -1,0 +1,43 @@
+{
+  "name": "DEFC",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~6dpibzBzMyuP0RKd0xgHdA==",
+        "voltageTier": 10,
+        "choices": {
+          "casings": 3
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~UiEe_M5KPsivzV1CV6DU7A==",
+        "voltageTier": 12,
+        "choices": {
+          "casings": 4
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~JMWTxsEINfKXfcUcXWs7nA==",
+        "voltageTier": 10,
+        "choices": {
+          "casings": 3
+        },
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}

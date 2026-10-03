@@ -1,0 +1,242 @@
+{
+  "name": "EG+CBD",
+  "products": [
+    {
+      "goodsId": "f:gregtech:liquid_medium_oil",
+      "amount": -30000
+    },
+    {
+      "goodsId": "f:gregtech:molten.plastic",
+      "amount": 1000
+    }
+  ],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {
+      "f:minecraft:water": 1,
+      "f:gregtech:sulfuricacid": 1,
+      "f:GalacticraftMars:oxygen": 1,
+      "f:GalacticraftMars:hydrogen": 1,
+      "i:gregtech:gt.metaitem.01:2010": 1,
+      "f:gregtech:hydrogen": 1
+    },
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~uQV72BLKO9qbDRZhuMXzCg==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1126",
+        "choices": {}
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~9rGvUYyFOUGDcGRqGaaHig==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~dEl9scyrND2k_RSsUQYibQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~pvEmmC8zOeeTaStnzuNc-Q==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~uUTP7HjjMTiWd52sV3WnWg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~wkTeJcA-NqmoPtJB9QOLkw==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~Ey4AokADNpCs3RPpJT1LNQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "LCR #1"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~le5F4V7IPWOxtOA_aooz0g==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~f70N1-LkO0KJyA7yrTZ7ag==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~h6Bxj6yeNxWRw8a5FAUyKA==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~RGBQX9sdOHClgw6dB72FUQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "LCR #2"
+      },
+      {
+        "type": "recipe_group",
+        "links": {
+          "f:minecraft:water": 1
+        },
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~-MMjPqvaM_aJNwSYxddjQg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~7mAJJ07tMQqjSU3dY1cKIw==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~qbmu-PuSOumwXRGxHJSv1Q==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~MzS3q8iUMdiaypgter36-w==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "LCR #3"
+      },
+      {
+        "type": "recipe_group",
+        "links": {},
+        "elements": [
+          {
+            "type": "recipe",
+            "recipeId": "r~zp2-dVK8PsWq_OKHwt7vBQ==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~1s-GG8HfOtmyR5CIZnBALg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {},
+            "fixedCrafterCount": 0.6
+          },
+          {
+            "type": "recipe",
+            "recipeId": "r~_S_QGJNlMVuNJgE-nZGArg==",
+            "voltageTier": 2,
+            "crafter": "i:gregtech:gt.blockmachines:1169",
+            "choices": {}
+          }
+        ],
+        "collapsed": true,
+        "name": "LCR #4"
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~rJ0qFL1MOkKn30ugOTXY-g==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1160",
+        "choices": {
+          "coilTier": 0
+        }
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~PQvgLKUWOLGxZ-qu1VUREg==",
+        "voltageTier": 2,
+        "crafter": "i:gregtech:gt.blockmachines:1126",
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~NmdZbNwsOnC81x2YKCurvg==",
+        "voltageTier": 1,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~KmkIBJ0bNSyDmt4NNHr52g==",
+        "voltageTier": 1,
+        "crafter": "i:gregtech:gt.blockmachines:1159",
+        "choices": {
+          "coils": 1
+        }
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~8H_OPuR5OYGeAD6mduoERw==",
+        "voltageTier": 1,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~T-mpF0VyMRG53A4IYEjaag==",
+        "voltageTier": 1,
+        "choices": {}
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~FmdZ0cQdOrq72CEoFyKxXw==",
+        "voltageTier": 1,
+        "choices": {}
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "min"
+  }
+}

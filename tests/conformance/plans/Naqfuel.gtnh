@@ -1,0 +1,52 @@
+{
+  "name": "Naqfuel",
+  "products": [],
+  "rootGroup": {
+    "type": "recipe_group",
+    "links": {},
+    "elements": [
+      {
+        "type": "recipe",
+        "recipeId": "r~C9WbwWoXMjSerM8cibAyAA==",
+        "voltageTier": 12,
+        "choices": {
+          "coils": 3
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~AtFem9qVPea3V_6oxSZfOQ==",
+        "voltageTier": 13,
+        "choices": {
+          "coils": 2
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~AtFem9qVPea3V_6oxSZfOQ==",
+        "voltageTier": 12,
+        "choices": {
+          "coils": 3
+        },
+        "fixedCrafterCount": 1
+      },
+      {
+        "type": "recipe",
+        "recipeId": "r~AtFem9qVPea3V_6oxSZfOQ==",
+        "voltageTier": 13,
+        "choices": {
+          "coils": 3
+        },
+        "fixedCrafterCount": 1
+      }
+    ],
+    "collapsed": false,
+    "name": "Group"
+  },
+  "settings": {
+    "minVoltage": 0,
+    "timeUnit": "sec"
+  }
+}
