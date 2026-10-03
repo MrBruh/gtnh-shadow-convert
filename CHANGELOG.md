@@ -1,0 +1,19 @@
+# Changelog
+
+All notable changes to this project are recorded here. The format follows
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
+[Semantic Versioning](https://semver.org/).
+
+## [Unreleased]
+
+### Added
+
+- `databin`: a reader for the calculator's `data.bin` (format version 7), ported from its
+  `repository.ts`, including the table that carries older exports' recipe ids forward. Any other
+  format version is refused.
+- `page`: the `.gtnh` plan model, read with exact numbers.
+- `goods`: the calculator's goods ids spelled as a gtnh-factory-flow plan spells them, with an
+  ore-dict input resolved to one concrete item.
+- `fetch`: `fetch_data()` downloads the 2.9 `data.bin` into a user cache, checks its sha256 and
+  records where it came from; a table maps each known file to its GTNH pack.
+- `testing.SyntheticData`: builds small synthetic `data.bin` files for tests.

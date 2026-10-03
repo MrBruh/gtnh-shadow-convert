@@ -1,0 +1,31 @@
+# Dev-toolchain pins, so a fresh clone and a CI run check the same code the same way.
+#
+# WHY THIS EXISTS. `pip install -e ".[dev]"` floats to whatever is newest that day, and the
+# floors in pyproject are floors, not pins. mypy crossed a major and pytest reached 9.x with
+# nothing in the repo recording it, which is the failure mode this file closes: a red CI run
+# that no commit caused, or worse, a green one that should not have been.
+#
+# WHY A CONSTRAINTS FILE AND NOT A FULL FREEZE. A `pip freeze` lockfile is resolved for one
+# interpreter on one OS; this project's CI runs on Linux while most development happens on
+# Windows, so a freeze would pin wheels that do not exist on the other. A constraints file only
+# bounds what actually gets installed, never forces it, so it stays correct on both.
+#
+# WHY THESE PACKAGES AND NOT EVERY TRANSITIVE DEP. These are the ones whose version alone can
+# turn CI red or green without a line of this repo changing: the linters and type checker decide
+# what passes static analysis, and the test stack decides what runs and how coverage is measured.
+# Pinning the long tail beneath them would buy little and break on the matrix for the reason above.
+#
+# The pyproject `[dev]` floors stay loose on purpose - they are library metadata, stating the
+# minimum this project works with. This file is the single place an exact version is chosen.
+#
+# TO UPDATE: bump the pin here, and if it is ruff, bump `.pre-commit-config.yaml` to the matching
+# rev in the same commit, because a hook that formats with a different ruff than `ruff format .`
+# produces a diff no one asked for. (This mirrors gtnh-process-line-solver's pins.)
+
+hypothesis==6.168.3
+mypy==2.3.1
+pre-commit==4.6.2
+pytest==9.1.1
+pytest-cov==7.1.0
+pytest-xdist==3.8.0
+ruff==0.16.9

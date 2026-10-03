@@ -1,0 +1,81 @@
+[build-system]
+# PEP 639 metadata (license SPDX string + license-files) needs hatchling >= 1.26.
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gtnh-shadow-convert"
+version = "0.0.0"
+description = "Convert ShadowTheAge's GT:NH calculator plans (.gtnh) into gtnh-factory-flow plan JSON."
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "The gtnh-shadow-convert authors" }]
+keywords = ["gregtech", "gtnh", "minecraft", "calculator"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
+    "Typing :: Typed",
+]
+# Standard library only, on purpose: gtnh-process-line-solver installs this as an optional extra,
+# and an extra that drags in a numeric stack (an LP solver, numpy) would be a heavy thing to opt into
+# for one file format. The LP is a small exact simplex of our own (lp.py).
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-xdist>=3.5",
+    "hypothesis>=6.0",
+    "ruff>=0.5",
+    "mypy>=1.8",
+    "pre-commit>=3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/MrBruh/gtnh-shadow-convert"
+Repository = "https://github.com/MrBruh/gtnh-shadow-convert"
+Issues = "https://github.com/MrBruh/gtnh-shadow-convert/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtnh_shadow_convert"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+target-version = "py314"
+
+[tool.ruff.lint]
+# The same curated rule set as gtnh-process-line-solver.
+select = ["E", "W", "F", "I", "N", "UP", "B", "C4", "SIM", "PT", "RUF"]
+ignore = [
+    # `ruff format` owns line length; enforcing E501 on top of it only fights the formatter.
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["N802", "N806"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.mypy]
+python_version = "3.14"
+files = ["src/gtnh_shadow_convert", "tests"]
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-n auto --cov=gtnh_shadow_convert --cov-report=term-missing"
+
+[tool.coverage.run]
+branch = true
+source = ["gtnh_shadow_convert"]
+
+[tool.coverage.report]
+show_missing = true
